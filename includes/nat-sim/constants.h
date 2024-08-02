@@ -3,6 +3,12 @@
 
 #define NS_VERSION "CS50 DEMO"
 
+#ifdef _WIN32
+    #define PATH_SEP "\\"
+#elif __unix
+    #define PATH_SEP "/"
+#endif
+
 #define UI_CHARACTER_LIMIT 1000
 
 #define MAP_SIZE 16 // 16 km2

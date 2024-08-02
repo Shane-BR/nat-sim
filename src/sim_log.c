@@ -85,7 +85,7 @@ void printToLogsFile()
     sprintf(filename, "../%s/log_%s.txt", folder_name, date);
     
     char command[128];
-    sprintf(command, "mkdir ..\\%s", folder_name);
+    sprintf(command, "mkdir ..%s%s", PATH_SEP, folder_name);
 
     system(command); // Messy but whatever. Fix later maybe
     FILE* fptr = fopen(filename, "w+");

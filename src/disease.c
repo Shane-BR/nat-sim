@@ -4,7 +4,6 @@
 #include "population.h"
 #include "sim_time.h"
 #include <stdint.h>
-#include <math.h>
 
 // Constants to base the infliction severity and disease infectivity off of (out of 0-255)
 static const int LOW = 50;

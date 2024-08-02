@@ -62,18 +62,18 @@ void initSpriteRenderer(void)
 // Place all potential textures in here
 void loadSpriteTextures()
 {
-    loadTexture("..\\resources\\textures\\tile-0.png", "tile_0");
-    loadTexture("..\\resources\\textures\\tile-1.png", "tile_1");
-    loadTexture("..\\resources\\textures\\tile-2.png", "tile_2");
-    loadTexture("..\\resources\\textures\\tile-3.png", "tile_3");
-    loadTexture("..\\resources\\textures\\town.png", "town");
-    loadTexture("..\\resources\\textures\\city.png", "city");
-    loadTexture("..\\resources\\textures\\border_line.png", "border");
-    loadTexture("..\\resources\\textures\\settler_horse.png", "settler");
-    loadTexture("..\\resources\\textures\\cursor.png", "cursor");
-    loadTexture("..\\resources\\textures\\cursor_focus.png", "cursor_focus");
-    loadTexture("..\\resources\\textures\\text_box.png", "text_box");
-    loadTexture("..\\resources\\textures\\button.png", "button");
+    loadTexture(".." PATH_SEP "resources" PATH_SEP "textures" PATH_SEP "tile-0.png", "tile_0");
+    loadTexture(".." PATH_SEP "resources" PATH_SEP "textures" PATH_SEP "tile-1.png", "tile_1");
+    loadTexture(".." PATH_SEP "resources" PATH_SEP "textures" PATH_SEP "tile-2.png", "tile_2");
+    loadTexture(".." PATH_SEP "resources" PATH_SEP "textures" PATH_SEP "tile-3.png", "tile_3");
+    loadTexture(".." PATH_SEP "resources" PATH_SEP "textures" PATH_SEP "town.png", "town");
+    loadTexture(".." PATH_SEP "resources" PATH_SEP "textures" PATH_SEP "city.png", "city");
+    loadTexture(".." PATH_SEP "resources" PATH_SEP "textures" PATH_SEP "border_line.png", "border");
+    loadTexture(".." PATH_SEP "resources" PATH_SEP "textures" PATH_SEP "settler_horse.png", "settler");
+    loadTexture(".." PATH_SEP "resources" PATH_SEP "textures" PATH_SEP "cursor.png", "cursor");
+    loadTexture(".." PATH_SEP "resources" PATH_SEP "textures" PATH_SEP "cursor_focus.png", "cursor_focus");
+    loadTexture(".." PATH_SEP "resources" PATH_SEP "textures" PATH_SEP "text_box.png", "text_box");
+    loadTexture(".." PATH_SEP "resources" PATH_SEP "textures" PATH_SEP "button.png", "button");
 }
 
 void drawSprite(const char* texture, const vec2 position, const vec2 size, const vec4 color, const float rotate_degrees)
