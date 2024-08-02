@@ -54,6 +54,7 @@ dkms.conf
 /build
 .cache
 bin/
+.vscode
 
 #Logs folder
 /logs
