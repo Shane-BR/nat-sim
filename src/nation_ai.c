@@ -233,7 +233,7 @@ void assignCitizensToWorkBorder(settlement* stl, int amount, border* border_tile
                 added_cit = true;
             }
 
-            // Lazy approach fuck you
+            // Lazy approach
             if (i == stl->local_population-1 && class_priority < max_class_priority)
             {
                 class_priority++;

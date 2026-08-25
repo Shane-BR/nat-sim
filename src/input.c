@@ -50,7 +50,7 @@ void freeBindings(void)
 
 void callBind(int bind)
 {
-    // Navigate each binding callback AND FUCKING CALLLL IT!!!!
+    // Navigate each binding callback
     list_node* cursor = binding_callbacks[bind];
     while (cursor != NULL)
     {

@@ -56,10 +56,10 @@ void addRandomCitizens(int num, position init_pos, citizen*** arr, unsigned int*
 }
 
 // Returns false if no citizen found
-bool removeCitizen(citizen* cit, settlement* stl)
-{    
-    bool out = removeFromDynamicPointerArray((void***)&stl->citizens, &stl->local_population, cit, false);
+bool removeCitizen(citizen* cit, settlement* stl, bool free_data)
+{       
     removeCitFromBorder(cit, stl);
+    bool out = removeFromDynamicPointerArray((void***)&stl->citizens, &stl->local_population, cit, free_data);
     return out;
 }
 
@@ -442,7 +442,7 @@ void citizenDie(citizen* cit, settlement* stl, CitDamageSource cause)
         disease_name = (char*)cit->medical_history[cit->med_history_size-1].key;
     }
 
-    if(removeCitizen(cit, stl))
+    if(removeCitizen(cit, stl, false))
     {
         // Update death_list
         addLinkedListNode(&getNation(stl->nation)->death_list, cit);
@@ -515,7 +515,7 @@ void breakup(citizen* cit)
     if (cit->partner != NULL) 
     {
         cit->partner->days_in_relationship = 0;
-        cit->partner->partner = NULL; // What the actual fuck
+        cit->partner->partner = NULL; // What the actual
     } 
 
     cit->days_in_relationship = 0;

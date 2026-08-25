@@ -1,7 +1,7 @@
 #include "pathfinder.h"
+#include "datatypes.h"
 #include "helpers.h"
 #include "map.h"
-#include <math.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -126,7 +126,7 @@ list_node* getPath(position start, position goal, int search_area_size, tile sea
             By default linked list nodes are added to the FRONT of the list.
             We are also getting the path positions in reverse order.
             So, by nature our linked list should arrange itself in the correct order.
-            finally! some fucking convenience for once.
+            finally, some convenience for once.
         */
 
         addLinkedListNode(&head, &cur->pos);
@@ -138,6 +138,7 @@ list_node* getPath(position start, position goal, int search_area_size, tile sea
     eraseLinkedList(&open_list, true);
 
     // Free nodes not in the path from the closed list
+    //eraseLinkedList(&closed_list, true);
     freeNonPathNodesFromClosedList(closed_list, head);
 
 
